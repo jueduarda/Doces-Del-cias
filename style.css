@@ -1,0 +1,2609 @@
+
+/* ==================================================
+   DOCES & DELÍCIAS — STYLE.CSS
+   IDENTIDADE VISUAL E TODAS AS IMAGENS
+
+   ORGANIZAÇÃO:
+   A. ESTILOS GERAIS
+   B. CENTRAL DE IMAGENS
+================================================== */
+
+
+/* ==================================================
+   PARTE A — DESIGN DO SITE
+================================================== */
+
+
+/* ================================================
+   A1. FONTES, CORES E CONFIGURAÇÕES
+================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root {
+  --cream: #fcf6ee;
+  --ivory: #f9efe3;
+  --paper: #fffaf4;
+  --rose: #d89699;
+  --blush: #f4dedd;
+  --caramel: #dfae79;
+  --choco: #452720;
+  --brown: #805448;
+  --muted: #8c766d;
+  --line: #eadbd0;
+  --shadow: 0 18px 60px rgba(78, 48, 32, .12);
+  --radius: 22px;
+  --serif: 'DM Serif Display', Georgia, serif;
+  --sans: 'DM Sans', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  font-family: var(--sans);
+  color: var(--choco);
+  -webkit-font-smoothing: antialiased;
+}
+
+body.locked {
+  overflow: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.container {
+  width: min(1180px, calc(100% - 48px));
+  margin: auto;
+}
+
+
+/* ================================================
+   A2. TODAS AS IMAGENS — CONFIGURAÇÃO VISUAL
+================================================ */
+
+.photo {
+  display: block;
+  background-color: #f2e2d4;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo-photo {
+  display: block;
+  flex: none;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-photo {
+  width: 100%;
+  aspect-ratio: 1920 / 900;
+  background-size: cover;
+  background-position: center;
+}
+
+.category-photo {
+  width: 100%;
+  height: 195px;
+}
+
+.product-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.05;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.facade-photo,
+.gift-photo,
+.cookie-photo {
+  display: block;
+  width: 100%;
+  min-height: 320px;
+}
+
+.detail-photo {
+  width: 100%;
+  min-height: 520px;
+}
+
+.cart-photo {
+  width: 84px;
+  height: 88px;
+  border-radius: 11px;
+}
+
+
+/* ================================================
+   A3. FAIXA SUPERIOR
+================================================ */
+
+.announcement {
+  min-height: 30px;
+  padding: 6px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 11px;
+  letter-spacing: .08em;
+  background: #765043;
+  color: #fff7f0;
+  text-align: center;
+}
+
+.announcement span {
+  opacity: .55;
+}
+
+
+/* ================================================
+   A4. CABEÇALHO E MENU
+================================================ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(252, 246, 238, .96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #ede0d6;
+}
+
+.header-inner {
+  min-height: 83px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
+
+.brand .logo-photo {
+  box-shadow: 0 4px 15px #77413322;
+}
+
+.brand strong {
+  display: block;
+  white-space: nowrap;
+  font: 25px var(--serif);
+}
+
+.brand small {
+  display: block;
+  color: #a0735d;
+  font-size: 8px;
+  letter-spacing: 2.5px;
+  margin-top: 3px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 31px;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 600;
+  color: #73584d;
+  padding: 12px 0;
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #9c5b5a;
+}
+
+.nav-links a.active::after {
+  content: "";
+  height: 2px;
+  background: #c98382;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.icon-btn {
+  border: 0;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  color: var(--choco);
+  display: grid;
+  place-items: center;
+}
+
+.cart-button {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #e7d0c6;
+  border-radius: 60px;
+  background: #fff9f4;
+  padding: 0 12px 0 14px;
+  color: var(--choco);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cart-button b {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #bd7975;
+  color: white;
+  min-width: 22px;
+  height: 22px;
+  padding: 2px;
+  font-size: 10px;
+}
+
+.mobile-toggle,
+.mobile-nav {
+  display: none;
+}
+
+
+/* ================================================
+   A5. TÍTULOS, TEXTOS E BOTÕES
+================================================ */
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  color: #b57c66;
+}
+
+.eyebrow.light {
+  color: #fff2e7;
+}
+
+.section-title {
+  font: clamp(33px, 4vw, 51px)/1.12 var(--serif);
+  margin: 16px 0;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 570px;
+  font-size: 15px;
+}
+
+.btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 16px 25px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-weight: 700;
+  font-size: 13px;
+  transition: .2s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px #4f2a2423;
+}
+
+.btn-primary {
+  background: #a75e58;
+  color: white;
+}
+
+.btn-dark {
+  background: var(--choco);
+  color: white;
+}
+
+.btn-outline {
+  border: 1px solid #cc9b89;
+  background: transparent;
+  color: #75483d;
+}
+
+.btn-cream {
+  background: #fff9f1;
+  color: var(--choco);
+}
+
+.btn.full {
+  width: 100%;
+}
+
+.text-link {
+  color: #a55c56;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+
+/* ================================================
+   A6. BANNER PRINCIPAL DA HOME
+================================================ */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #f5e8db;
+}
+
+.hero-cta {
+  position: absolute;
+  bottom: 11%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 10px 30px #4d2e2228;
+}
+
+.hero-cta:hover {
+  transform: translate(-50%, -2px);
+}
+
+
+/* ================================================
+   A7. BOAS-VINDAS DA HOME
+================================================ */
+
+.home-intro {
+  padding: 84px 0 52px;
+  text-align: center;
+}
+
+.home-intro .section-subtitle {
+  margin: 0 auto;
+}
+
+.qualities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 45px auto 0;
+  max-width: 900px;
+}
+
+.quality {
+  display: flex;
+  gap: 13px;
+  text-align: left;
+  padding: 15px;
+}
+
+.quality .symbol {
+  font-size: 28px;
+  color: #b58070;
+}
+
+.quality strong {
+  display: block;
+  font: 22px var(--serif);
+  margin-bottom: 4px;
+}
+
+.quality small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* ================================================
+   A8. SEÇÕES GERAIS DA HOME
+================================================ */
+
+.section {
+  padding: 72px 0;
+}
+
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 27px;
+}
+
+
+/* ================================================
+   A9. UM CARDÁPIO CHEIO DE AFETO
+================================================ */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+}
+
+.category-tile {
+  display: block;
+  background: #fffaf3;
+  border: 1px solid #eddcd0;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: .25s;
+}
+
+.category-tile:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.category-tile .tile-bottom {
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-tile h3 {
+  font: 23px/1.1 var(--serif);
+  margin: 0;
+}
+
+.category-tile .tile-bottom span {
+  color: #a76559;
+}
+
+
+/* ================================================
+   A10. QUERIDINHOS E CARDS DE PRODUTOS
+================================================ */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fffdf9;
+  border: 1px solid #efdfd3;
+  transition: .22s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(74, 38, 30, .12);
+}
+
+.product-info {
+  padding: 18px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+}
+
+.product-info .catlabel {
+  font-size: 10px;
+  letter-spacing: 1.7px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ad7b65;
+}
+
+.product-info h3 {
+  font: 22px/1.16 var(--serif);
+  margin: 0;
+}
+
+.product-info p {
+  font-size: 12px;
+  color: #877469;
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+
+.product-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  gap: 6px;
+}
+
+.price-pending {
+  font-size: 11px;
+  color: #a28377;
+  font-weight: 700;
+}
+
+.small-add {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--choco);
+  color: white;
+  font-size: 25px;
+  line-height: 1;
+}
+
+
+/* ================================================
+   A11. FACHADA E NOSSA HISTÓRIA NA HOME
+================================================ */
+
+.story-banner {
+  margin: 85px auto 25px;
+  background: #e9d0bb;
+  border-radius: 30px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 440px;
+}
+
+.story-copy {
+  padding: 74px 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.story-copy h2 {
+  font: clamp(36px, 4vw, 54px)/1.1 var(--serif);
+  margin: 18px 0;
+}
+
+.story-copy p {
+  line-height: 1.8;
+  color: #72584c;
+  margin-bottom: 27px;
+}
+
+
+/* ================================================
+   A12. CARINHO QUE VIRA PRESENTE
+================================================ */
+
+.feature-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #6e493b;
+  border-radius: 25px;
+  overflow: hidden;
+  color: #fff7ed;
+  min-height: 360px;
+  margin: 80px auto;
+}
+
+.feature-copy {
+  padding: 55px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.feature-copy h2 {
+  font: 46px/1.12 var(--serif);
+  margin: 14px 0;
+}
+
+.feature-copy p {
+  line-height: 1.8;
+  color: #f1d8ca;
+}
+
+
+/* ================================================
+   A13. CHAMADA FINAL DA HOME
+================================================ */
+
+.newsletter {
+  background: #f5e6dd;
+  text-align: center;
+  padding: 70px 25px;
+  margin-top: 70px;
+}
+
+.newsletter h2 {
+  font: 40px var(--serif);
+  margin: 12px 0;
+}
+
+.newsletter p {
+  line-height: 1.7;
+  color: #8a7165;
+}
+
+
+/* ================================================
+   A14. CABEÇALHO DAS PÁGINAS INTERNAS
+================================================ */
+
+.page-banner {
+  background: #f2e3d6;
+  padding: 66px 0 65px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-banner h1 {
+  font: clamp(42px, 6vw, 65px)/1.15 var(--serif);
+  margin: 12px 0;
+}
+
+.page-banner p {
+  color: #886b5e;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* ================================================
+   A15. CARDÁPIO — FILTROS E PESQUISA
+================================================ */
+
+.catalog-layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 32px;
+  padding-top: 38px;
+  padding-bottom: 90px;
+}
+
+.sidebar {
+  align-self: start;
+  position: sticky;
+  top: 135px;
+}
+
+.sidebar h3 {
+  margin: 0 0 17px;
+  font: 23px var(--serif);
+}
+
+.category-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.category-filter button {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  border-radius: 11px;
+  padding: 11px 13px;
+  text-align: left;
+  color: #7c6154;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.category-filter button.active {
+  background: #eacfc8;
+  color: #67392d;
+}
+
+.category-filter b {
+  font-size: 11px;
+  opacity: .65;
+}
+
+.catalog-toolbar {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.catalog-toolbar .results {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.catalog-controls {
+  display: flex;
+  gap: 11px;
+  flex-wrap: wrap;
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  border: 1px solid #e9d9ca;
+  border-radius: 12px;
+  padding: 0 12px;
+}
+
+.search-field input {
+  height: 42px;
+  width: 190px;
+  border: 0;
+  background: none;
+  outline: none;
+  font-size: 12px;
+  color: #52362a;
+}
+
+.sort-select {
+  border: 1px solid #e9d9ca;
+  border-radius: 12px;
+  background: white;
+  padding: 0 11px;
+  color: #674d42;
+  font-size: 12px;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  border: 1px dashed #e1c6b4;
+  border-radius: 20px;
+  padding: 55px;
+  text-align: center;
+  background: #fffaf6;
+}
+
+.empty-state h3 {
+  font: 30px var(--serif);
+}
+
+
+/* ================================================
+   A16. PÁGINA NOSSA HISTÓRIA
+================================================ */
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+  padding: 90px 0;
+}
+
+.about-layout .facade-photo {
+  height: 520px;
+  border-radius: 24px;
+}
+
+.about-layout h2 {
+  font: clamp(35px, 5vw, 55px)/1.1 var(--serif);
+}
+
+.about-layout p {
+  font-size: 14px;
+  line-height: 1.95;
+  color: #80685d;
+}
+
+
+/* ================================================
+   A17. PÁGINA CONTATO
+================================================ */
+
+.contact-section {
+  padding: 80px 0;
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 65px;
+}
+
+.contact-section h2 {
+  font: 45px var(--serif);
+  margin: 15px 0;
+}
+
+.contact-section p {
+  color: #846b60;
+  line-height: 1.8;
+}
+
+.contact-facade {
+  height: 230px;
+  min-height: 230px;
+  border-radius: 20px;
+  margin-top: 24px;
+}
+
+.contact-card {
+  padding: 35px;
+  border: 1px solid #ead8c7;
+  border-radius: 24px;
+  background: white;
+  box-shadow: 0 8px 30px #3b1c1312;
+}
+
+
+/* ================================================
+   A18. FORMULÁRIOS
+================================================ */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.field label {
+  font-weight: 700;
+  font-size: 12px;
+  color: #64483d;
+}
+
+.field input,
+.field textarea,
+.field select {
+  border: 1px solid #e7d7c9;
+  border-radius: 10px;
+  background: #fffdfa;
+  padding: 13px 14px;
+  font-size: 13px;
+  color: var(--choco);
+  outline: none;
+  width: 100%;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  border-color: #ba7974;
+  box-shadow: 0 0 0 3px #c68b8428;
+}
+
+.field textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-footnote {
+  font-size: 11px !important;
+  line-height: 1.6 !important;
+  color: #987a6b !important;
+}
+
+
+/* ================================================
+   A19. FUNDO DAS JANELAS
+================================================ */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(42, 26, 20, .56);
+  backdrop-filter: blur(4px);
+}
+
+.overlay[hidden] {
+  display: none;
+}
+
+body.locked {
+  overflow: hidden;
+}
+
+
+/* ================================================
+   A20. CARRINHO LATERAL
+================================================ */
+
+.drawer {
+  position: fixed;
+  z-index: 110;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(460px, 100%);
+  background: #fffcf8;
+  transform: translateX(110%);
+  transition: transform .27s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+}
+
+.drawer.open {
+  transform: translateX(0);
+}
+
+.drawer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.drawer-top h2 {
+  font: 31px var(--serif);
+  margin: 7px 0 0;
+}
+
+.drawer-top h2 span {
+  font: 14px var(--sans);
+  color: #997d6d;
+}
+
+.close-btn {
+  border: 0;
+  background: transparent;
+  font-size: 30px;
+  line-height: 1;
+  color: #654539;
+}
+
+.cart-scroll {
+  overflow: auto;
+  flex: 1;
+  padding: 20px 26px;
+}
+
+.cart-empty {
+  text-align: center;
+  margin-top: 90px;
+}
+
+.cart-empty .empty-icon {
+  font-size: 56px;
+  display: block;
+}
+
+.cart-empty h3 {
+  font: 29px var(--serif);
+}
+
+.cart-empty p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.cart-line {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: start;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.cart-line strong {
+  display: block;
+  font: 19px var(--serif);
+  margin-bottom: 4px;
+}
+
+.cart-line small {
+  color: #987d70;
+  font-size: 11px;
+}
+
+.cart-line .remove-item {
+  max-width: 62px;
+}
+
+.quantity {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #e3cbbd;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 14px;
+}
+
+.quantity button {
+  border: 0;
+  background: #fff7ef;
+  width: 30px;
+  height: 30px;
+  font-size: 17px;
+}
+
+.quantity span {
+  min-width: 28px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.remove-item {
+  border: 0;
+  background: none;
+  color: #ad7b74;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.cart-bottom {
+  padding: 24px 27px;
+  border-top: 1px solid var(--line);
+}
+
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.hint {
+  font-size: 11px;
+  color: #9b7766;
+  line-height: 1.6;
+}
+
+.text-button {
+  width: 100%;
+  border: 0;
+  background: none;
+  color: #80554a;
+  font-size: 12px;
+  margin-top: 17px;
+  text-decoration: underline;
+}
+
+
+/* ================================================
+   A21. JANELAS DE DETALHES E INGREDIENTES
+================================================ */
+
+.modal {
+  position: fixed;
+  z-index: 115;
+  inset: 50% auto auto 50%;
+  width: min(880px, calc(100% - 30px));
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: translate(-50%, -48%) scale(.98);
+  background: #fffaf6;
+  border-radius: 25px;
+  box-shadow: var(--shadow);
+  visibility: hidden;
+  opacity: 0;
+  transition: .2s;
+}
+
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 17px;
+  z-index: 4;
+  border: 0;
+  border-radius: 50%;
+  background: #fff9f3e8;
+  width: 38px;
+  height: 38px;
+  font-size: 25px;
+  display: grid;
+  place-items: center;
+}
+
+.product-modal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+}
+
+.modal-info {
+  padding: 56px 35px 35px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-info h2 {
+  font: clamp(30px, 3vw, 42px)/1.12 var(--serif);
+  margin: 13px 0;
+}
+
+.modal-info p {
+  font-size: 14px;
+  color: #856f62;
+  line-height: 1.75;
+}
+
+.ingredient-box {
+  background: #f9eee3;
+  border-radius: 14px;
+  padding: 17px 18px;
+  margin-top: 10px;
+}
+
+.ingredient-box b {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.ingredient-box p {
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 25px;
+}
+
+.modal-actions .quantity {
+  margin: 0;
+  height: 47px;
+}
+
+.modal-actions .quantity button {
+  width: 36px;
+  height: 47px;
+}
+
+.modal-actions .quantity span {
+  width: 30px;
+}
+
+.modal-actions .btn {
+  flex: 1;
+}
+
+
+/* ================================================
+   A22. CHECKOUT
+================================================ */
+
+.checkout-modal {
+  padding: 45px;
+  max-width: 620px;
+  margin: auto;
+}
+
+.checkout-modal h2,
+.success-modal h2 {
+  font: 38px var(--serif);
+  margin: 8px 0 14px;
+}
+
+.checkout-modal p {
+  line-height: 1.7;
+  color: #876e63;
+  font-size: 13px;
+}
+
+.checkout-notice {
+  background: #fff0df;
+  padding: 17px;
+  border: 1px solid #efd1ae;
+  border-radius: 12px;
+  font-size: 12px;
+  line-height: 1.65;
+  color: #78584b;
+  margin: 16px 0;
+}
+
+.success-modal {
+  text-align: center;
+  padding: 65px 40px;
+}
+
+.success-modal .success-icon {
+  font-size: 64px;
+  color: #b97973;
+}
+
+.success-modal p {
+  line-height: 1.8;
+  color: #866d61;
+  max-width: 390px;
+  margin: 15px auto 25px;
+}
+
+
+/* ================================================
+   A23. NOTIFICAÇÕES
+================================================ */
+
+.toast {
+  position: fixed;
+  z-index: 125;
+  bottom: 25px;
+  left: 50%;
+  transform: translate(-50%, 25px);
+  opacity: 0;
+  visibility: hidden;
+  background: #442b25;
+  color: white;
+  padding: 15px 23px;
+  border-radius: 999px;
+  box-shadow: 0 12px 30px #31170d30;
+  transition: .25s;
+  font-size: 13px;
+  text-align: center;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+
+/* ================================================
+   A24. RODAPÉ
+================================================ */
+
+
+/* ==========================================
+   FOOTER — DOCES & DELÍCIAS
+========================================== */
+
+/* 1. FUNDO E ESTRUTURA */
+
+.footer {
+  background: #4a3028;
+  color: #fff4eb;
+  padding-top: 65px;
+}
+
+.footer-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.8fr)
+    minmax(0, 1fr)
+    minmax(0, 1.1fr)
+    minmax(0, 1.2fr);
+
+  column-gap: 55px;
+  row-gap: 35px;
+
+  align-items: start;
+  padding-bottom: 65px;
+}
+
+/* 2. PRIMEIRA COLUNA */
+
+.footer-about {
+  min-width: 0;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  width: 100%;
+  font-family: var(--serif);
+  text-decoration: none;
+}
+
+/* 3. LOGO PEQUENA */
+
+.footer-logo {
+  display: block;
+
+  width: 72px;
+  height: 72px;
+
+  min-width: 72px;
+  min-height: 72px;
+
+  flex: 0 0 72px;
+
+  background-image: url("img/Logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 50%;
+}
+
+/* 4. NOME DA LOJA */
+
+.footer-brand-name {
+  display: block;
+
+  font-family: var(--serif);
+  font-size: 24px;
+  line-height: 1.15;
+
+  white-space: nowrap;
+  color: #fff4eb;
+}
+
+/* 5. DESCRIÇÃO DA LOJA */
+
+.footer-description {
+  max-width: 310px;
+  margin-top: 20px;
+
+  font-size: 13px;
+  line-height: 1.8;
+  color: #e6cabb;
+}
+
+/* 6. TÍTULOS DAS COLUNAS */
+
+.footer-column h4 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  margin: 10px 0 25px;
+  color: #fff4eb;
+}
+
+/* 7. LINKS */
+
+.footer-column a {
+  display: block;
+  width: fit-content;
+
+  margin-bottom: 15px;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: #edd8cd;
+
+  transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+/* 8. TEXTOS DA ÚLTIMA COLUNA */
+
+.footer-column p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #e6cabb;
+  margin: 0 0 18px;
+}
+
+.footer-note {
+  opacity: 0.75;
+}
+
+/* 9. RODAPÉ INFERIOR */
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding-top: 23px;
+  padding-bottom: 25px;
+
+  border-top: 1px solid #876458;
+
+  font-size: 11px;
+  color: #d9bdad;
+}
+
+/* ==========================================
+   RESPONSIVIDADE — TABLETS
+========================================== */
+
+@media (max-width: 1050px) {
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+  }
+
+  .footer-brand-name {
+    white-space: normal;
+  }
+}
+
+/* ==========================================
+   RESPONSIVIDADE — CELULARES
+========================================== */
+
+@media (max-width: 600px) {
+
+  .footer {
+    padding-top: 45px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 20px;
+    padding-bottom: 40px;
+  }
+
+  .footer-about {
+    grid-column: 1 / -1;
+  }
+
+  .footer-logo {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    flex-basis: 60px;
+  }
+
+  .footer-brand-name {
+    font-size: 23px;
+    white-space: normal;
+  }
+
+  .footer-description {
+    max-width: 360px;
+  }
+
+  .footer-column h4 {
+    margin-bottom: 18px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+
+/* ================================================
+   A25. ACESSIBILIDADE
+================================================ */
+
+:where(button, a, input, select, textarea):focus-visible {
+  outline: 3px solid #bc7a78;
+  outline-offset: 3px;
+}
+
+
+/* ================================================
+   A26. RESPONSIVIDADE — TABLET
+================================================ */
+
+@media (max-width: 1060px) {
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .brand strong {
+    font-size: 21px;
+  }
+
+  .footer-grid {
+    gap: 24px;
+  }
+
+  .category-grid,
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ================================================
+   A27. RESPONSIVIDADE — CELULAR
+================================================ */
+
+@media (max-width: 760px) {
+
+  .container {
+    width: min(100% - 32px, 620px);
+  }
+
+  .announcement {
+    font-size: 9px;
+  }
+
+  .announcement span {
+    display: none;
+  }
+
+  .header-inner {
+    min-height: 74px;
+  }
+
+  .brand .logo-photo {
+    width: 49px;
+    height: 49px;
+  }
+
+  .brand strong {
+    font-size: 20px;
+  }
+
+  .brand small {
+    font-size: 7px;
+    letter-spacing: 1.6px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: grid;
+  }
+
+  .header-actions {
+    gap: 3px;
+  }
+
+  .cart-button {
+    padding: 0 8px;
+  }
+
+  .cart-button > span {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: var(--cream);
+    padding: 10px 24px 20px;
+    border-top: 1px solid var(--line);
+  }
+
+  .mobile-nav.open {
+    display: flex;
+  }
+
+  .mobile-nav a {
+    padding: 13px 0;
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  .hero-photo {
+    height: 310px;
+    aspect-ratio: auto;
+  }
+
+  .hero-cta {
+    bottom: 20px;
+    padding: 13px 22px;
+  }
+
+  .home-intro {
+    padding: 56px 0 30px;
+  }
+
+  .qualities {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    margin-top: 25px;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .section-title {
+    font-size: 38px;
+  }
+
+  .section-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .category-photo {
+    height: 147px;
+  }
+
+  .category-tile h3 {
+    font-size: 19px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 11px;
+  }
+
+  .product-info {
+    padding: 13px;
+  }
+
+  .product-info h3 {
+    font-size: 19px;
+  }
+
+  .product-info p {
+    font-size: 11px;
+  }
+
+  .story-banner,
+  .feature-strip {
+    grid-template-columns: 1fr;
+    margin: 40px auto;
+  }
+
+  .story-banner .facade-photo,
+  .feature-strip .gift-photo,
+  .feature-strip .cookie-photo {
+    height: 280px;
+    min-height: 280px;
+  }
+
+  .story-copy,
+  .feature-copy {
+    padding: 36px 26px;
+  }
+
+  .story-copy h2,
+  .feature-copy h2 {
+    font-size: 40px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .footer-grid > div:first-child {
+    grid-column: span 2;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .catalog-layout {
+    display: block;
+    padding-top: 20px;
+  }
+
+  .sidebar {
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .category-filter {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .category-filter button {
+    white-space: nowrap;
+    width: auto;
+    border: 1px solid var(--line);
+    background: #fff9f2;
+    gap: 12px;
+  }
+
+  .category-filter button.active {
+    background: #eacfc8;
+  }
+
+  .catalog-toolbar {
+    align-items: flex-start;
+  }
+
+  .search-field input {
+    width: 155px;
+  }
+
+  .page-banner {
+    padding: 48px 0;
+  }
+
+  .about-layout,
+  .contact-section {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 45px 0;
+  }
+
+  .about-layout .facade-photo {
+    height: 320px;
+  }
+
+  .contact-section h2 {
+    font-size: 36px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .product-modal {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-photo {
+    height: 255px;
+    min-height: 0;
+  }
+
+  .modal-info {
+    padding: 27px 23px;
+  }
+
+  .modal-info h2 {
+    font-size: 32px;
+  }
+
+  .modal-actions {
+    padding-top: 17px;
+  }
+
+  .checkout-modal {
+    padding: 35px 24px;
+  }
+
+  .checkout-modal h2 {
+    font-size: 32px;
+  }
+
+  .drawer-top {
+    padding: 25px 22px;
+  }
+}
+
+
+/* ================================================
+   A28. RESPONSIVIDADE — TELAS PEQUENAS
+================================================ */
+
+@media (max-width: 390px) {
+
+  .brand strong {
+    font-size: 17px;
+  }
+
+  .brand small {
+    font-size: 6px;
+  }
+
+  .brand {
+    gap: 7px;
+  }
+
+  .brand .logo-photo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .section-title {
+    font-size: 33px;
+  }
+
+  .category-tile h3 {
+    font-size: 16px;
+  }
+
+  .category-tile .tile-bottom {
+    padding: 12px;
+  }
+
+  .product-info h3 {
+    font-size: 17px;
+  }
+}
+
+
+/* ==================================================
+   PARTE B — CENTRAL DE IMAGENS
+
+   A PARTIR DAQUI FICAM TODAS AS FOTOS.
+
+   PARA TROCAR UMA IMAGEM:
+   MUDE APENAS O NOME DENTRO DE url("img/...")
+
+   NÃO PRECISA EDITAR O JAVASCRIPT.
+================================================== */
+
+
+/* ================================================
+   B1. LOGO ORIGINAL DA LOJA
+
+   Utilizada no cabeçalho e no rodapé.
+================================================ */
+
+.logo-photo {
+  background-image: url("img/Logo.png");
+}
+
+
+/* ================================================
+   B2. BANNER PRINCIPAL DA HOME
+================================================ */
+
+.hero-photo {
+  background-image: url("img/Banner.png");
+}
+
+
+/* ================================================
+   B3. FACHADA DA LOJA
+
+   Utilizada na Home, Nossa história e Contato.
+================================================ */
+
+.facade-photo {
+  background-image: url("img/Fachada.png");
+}
+
+
+
+
+/* ==========================================
+   IMAGEM EXCLUSIVA DA PÁGINA NOSSA HISTÓRIA
+========================================== */
+
+.about-layout .facade-photo {
+  background-image: url("img/Avó\ Confeiteira_\ Doces\ &\ Delícias.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* ================================================
+   B4. CARINHO QUE VIRA PRESENTE
+================================================ */
+
+.gift-photo {
+  background-image: url("img/Brigadeiro Gourmet.png");
+}
+
+
+/* ================================================
+   B5. FOTO DA SEÇÃO NOSSA HISTÓRIA
+================================================ */
+
+.cookie-photo {
+  background-image: url("img/Cookie com Gotas de Chocolate.png");
+}
+
+
+/* ================================================
+   B6. UM CARDÁPIO CHEIO DE AFETO
+
+   AQUI FICAM AS 7 FOTOS DAS CATEGORIAS.
+================================================ */
+
+/* 1. CAFÉS */
+
+[data-category-photo="cafes"] {
+  background-image: url("img/Latte classico.jpg");
+}
+
+/* 2. SALGADOS */
+
+[data-category-photo="salgados"] {
+  background-image: url("img/Croissant.png");
+}
+
+/* 3. DOCES */
+
+[data-category-photo="doces"] {
+  background-image: url("img/Brownie de Chocolate com Ganache.png");
+}
+
+/* 4. DOCINHOS ARTESANAIS */
+
+[data-category-photo="artesanais"] {
+  background-image: url("img/Brigadeiro Gourmet.png");
+}
+
+/* 5. PÃES E FOLHADOS */
+
+[data-category-photo="paes"] {
+  background-image: url("img/Brioche amanteigado.png");
+}
+
+/* 6. SUCOS E VITAMINAS */
+
+[data-category-photo="bebidas"] {
+  background-image: url("img/Vitamina de morango.jpg");
+}
+
+/* 7. TORTAS */
+
+[data-category-photo="tortas"] {
+  background-image: url("img/Torta\ Cheesecake\ de\ Frutas\ Vermelhas.png");
+}
+
+
+/* ================================================
+   B7. QUERIDINHOS DA NOSSA VITRINE
+
+   Os queridinhos usam as MESMAS imagens
+   dos produtos cadastrados abaixo.
+
+   Por exemplo:
+   p02 = Cappuccino
+   p17 = Brownie
+   p26 = Brigadeiro
+   p39 = Brioche
+
+   Para trocar QUAIS produtos aparecem,
+   altere const queridinhos no app.js.
+
+   Para trocar a FOTO de um queridinho,
+   altere a imagem correspondente abaixo.
+================================================ */
+
+
+/* ================================================
+   B8. IMAGENS DOS 5 CAFÉS
+================================================ */
+
+/* p01 — LATTE CLÁSSICO */
+
+[data-photo="p01"] {
+  background-image: url("img/Latte classico.jpg");
+}
+
+/* p02 — CAPPUCCINO DE CANELA */
+
+[data-photo="p02"] {
+  background-image: url("img/Cappuccino de canela.jpg");
+}
+
+/* p03 — MOCHA DE CHOCOLATE */
+
+[data-photo="p03"] {
+  background-image: url("img/Mocha de chocolate.jpg");
+}
+
+/* p04 — LATTE DE CARAMELO */
+
+[data-photo="p04"] {
+  background-image: url("img/Latte de caramelo.jpg");
+}
+
+/* p05 — CAFÉ ESPRESSO */
+
+[data-photo="p05"] {
+  background-image: url("img/Espresso da casa.jpg");
+}
+
+
+/* ================================================
+   B9. IMAGENS DOS 10 SALGADOS
+================================================ */
+
+/* p06 — CROISSANT DE QUEIJO */
+
+[data-photo="p06"] {
+  background-image: url("img/Bolinha\ de\ queijo.jpg");
+}
+
+/* p07 — CROISSANT DE PRESUNTO E QUEIJO */
+
+[data-photo="p07"] {
+  background-image: url("img/Coxinha\ de\ frango.jpg");
+}
+
+/* p08 — EMPADA DE FRANGO */
+
+[data-photo="p08"] {
+  background-image: url("img/Empada de frango.jpg");
+}
+
+/* p09 — PÃO DE QUEIJO */
+
+[data-photo="p09"] {
+  background-image: url("img/Pao\ de\ queijo.jpg");
+}
+
+/* p10 — QUICHE DE ALHO-PORÓ */
+
+[data-photo="p10"] {
+  background-image: url("img/Pao\ na\ chapa.jpg");
+}
+
+/* p11 — ESFIHA DE CARNE */
+
+[data-photo="p11"] {
+  background-image: url("img/Quibe.jpg");
+}
+
+/* p12 — SANDUÍCHE NATURAL */
+
+[data-photo="p12"] {
+  background-image: url("img/Risole\ de\ presunto\ e\ queijo.jpg");
+}
+
+/* p13 — TORTA SALGADA DE FRANGO */
+
+[data-photo="p13"] {
+  background-image: url("img/Sanduiche\ natural.jpg");
+}
+
+/* p14 — FOLHADO DE QUEIJO */
+
+[data-photo="p14"] {
+  background-image: url("img/Tapioca.jpg");
+}
+
+/* p15 — MINI PIZZA */
+
+[data-photo="p15"] {
+  background-image: url("img/Tosteque.jpg");
+}
+
+
+/* ================================================
+   B10. IMAGENS DOS 10 DOCES
+================================================ */
+
+/* p16 — COOKIE COM GOTAS DE CHOCOLATE */
+
+[data-photo="p16"] {
+  background-image: url("img/Brownie\ de\ Chocolate\ com\ Ganache.png");
+}
+
+/* p17 — BROWNIE COM GANACHE */
+
+[data-photo="p17"] {
+  background-image: url("img/Cinnamon\ Roll\ de\ Canela.png");
+}
+
+/* p18 — CINNAMON ROLL */
+
+[data-photo="p18"] {
+  background-image: url("img/Cookie\ com\ Gotas\ de\ Chocolate.png");
+}
+
+/* p19 — PALHA ITALIANA */
+
+[data-photo="p19"] {
+  background-image: url("img/Cupcake\ de\ Baunilha\ com\ Morango.png");
+}
+
+/* p20 — BOMBOM DE MORANGO */
+
+[data-photo="p20"] {
+  background-image: url("img/Donut\ de\ Morango.png");
+}
+
+/* p21 — ÉCLAIR DE CHOCOLATE */
+
+[data-photo="p21"] {
+  background-image: url("img/Éclair de Chocolate (Bomba).png");
+}
+
+/* p22 — WAFFLE COM MORANGOS */
+
+[data-photo="p22"] {
+  background-image: url("img/Mousse\ de\ Maracujá.png");
+}
+
+/* p23 — PETIT GÂTEAU */
+
+[data-photo="p23"] {
+  background-image: url("img/Petit\ Gâteau\ de\ Chocolate.png");
+}
+
+/* p24 — CUPCAKE DE BAUNILHA */
+
+[data-photo="p24"] {
+  background-image: url("img/Pudim\ de\ Leite\ Condensado.png");
+}
+
+/* p25 — BOLO DE CENOURA */
+
+[data-photo="p25"] {
+  background-image: url("img/Waffle\ com\ Morangos.png");
+}
+
+
+/* ================================================
+   B11. IMAGENS DOS 10 DOCINHOS ARTESANAIS
+================================================ */
+
+/* p26 — BRIGADEIRO GOURMET */
+
+[data-photo="p26"] {
+  background-image: url("img/Beijinho\ de\ Coco.png");
+}
+
+/* p27 — BEIJINHO DE COCO */
+
+[data-photo="p27"] {
+  background-image: url("img/Bicho\ de\ Pé.png");
+}
+
+/* p28 — BICHO DE PÉ */
+
+[data-photo="p28"] {
+  background-image: url("img/Bombom\ de\ Morango.png");
+}
+
+/* p29 — TRUFA DE CHOCOLATE */
+
+[data-photo="p29"] {
+  background-image: url("img/Brigadeiro\ Gourmet.png");
+}
+
+/* p30 — CAJUZINHO DE AMENDOIM */
+
+[data-photo="p30"] {
+  background-image: url("img/Cajuzinho de Amendoim.png");
+}
+
+/* p31 — CAMAFEU DE NOZES */
+
+[data-photo="p31"] {
+  background-image: url("img/Camafeu de Nozes.png");
+}
+
+/* p32 — CASADINHO GOURMET */
+
+[data-photo="p32"] {
+  background-image: url("img/Casadinho Gourmet.png");
+}
+
+/* p33 — OLHO DE SOGRA */
+
+[data-photo="p33"] {
+  background-image: url("img/Camafeu de Nozes.png");
+}
+
+/* p34 — BOMBOM ARTESANAL DE MORANGO */
+
+[data-photo="p34"] {
+  background-image: url("img/Palha\ Italiana.png");
+}
+
+/* p35 — PALHA ITALIANA ARTESANAL */
+
+[data-photo="p35"] {
+  background-image: url("img/Trufa\ de\ Chocolate.png");
+}
+
+
+/* ================================================
+   B12. IMAGENS DOS 5 PÃES E FOLHADOS
+================================================ */
+
+/* p36 — PÃO FRANCÊS */
+
+[data-photo="p36"] {
+  background-image: url("img/Croissant.png");
+}
+
+/* p37 — PÃO INTEGRAL */
+
+[data-photo="p37"] {
+  background-image: url("img/Pão\ Francês.png");
+}
+
+/* p38 — BAGUETE FRANCESA */
+
+[data-photo="p38"] {
+  background-image: url("img/Pão\ integral\ com\ sementes.png");
+}
+
+/* p39 — BRIOCHE AMANTEIGADO */
+
+[data-photo="p39"] {
+  background-image: url("img/Baguete\ Francesa.png");
+}
+
+/* p40 — CROISSANT TRADICIONAL */
+
+[data-photo="p40"] {
+  background-image: url("img/Brioche\ amanteigado.png");
+}
+
+
+/* ================================================
+   B13. IMAGENS DOS 10 SUCOS E VITAMINAS
+================================================ */
+
+/* p41 — SUCO DE ABACAXI COM HORTELÃ */
+
+[data-photo="p41"] {
+  background-image: url("img/Suco\ de\ abacaxi\ com\ hortela.jpg");
+}
+
+/* p42 — SUCO DE MELANCIA */
+
+[data-photo="p42"] {
+  background-image: url("img/Suco\ de\ laranja.jpg");
+}
+
+/* p43 — SUCO DE MORANGO */
+
+[data-photo="p43"] {
+  background-image: url("img/Suco\ de\ maracuja.jpg");
+}
+
+/* p44 — VITAMINA DE BANANA COM CHOCOLATE */
+
+[data-photo="p44"] {
+  background-image: url("img/Suco\ de\ melancia.jpg");
+}
+
+/* p45 — VITAMINA DE MORANGO */
+
+[data-photo="p45"] {
+  background-image: url("img/Suco\ de\ morango.jpg");
+}
+
+/* p46 — SUCO DE LARANJA */
+
+[data-photo="p46"] {
+  background-image: url("img/Vitamina\ de\ abacate.jpg");
+}
+
+/* p47 — SUCO DE MANGA */
+
+[data-photo="p47"] {
+  background-image: url("img/Vitamina\ de\ banana\ com\ aveia.jpg");
+}
+
+/* p48 — SUCO DE MARACUJÁ */
+
+[data-photo="p48"] {
+  background-image: url("img/Vitamina\ de\ banana\ com\ chocolate.jpg");
+}
+
+/* p49 — VITAMINA DE BANANA */
+
+[data-photo="p49"] {
+  background-image: url("img/Vitamina\ de\ mamão.png");
+}
+
+/* p50 — SUCO DE FRUTAS VERMELHAS */
+
+[data-photo="p50"] {
+  background-image: url("img/Vitamina de morango.jpg");
+}
+
+
+/* ================================================
+   B14. IMAGENS DAS 10 TORTAS
+================================================ */
+
+/* p51 — TORTA DE CHOCOLATE */
+
+[data-photo="p51"] {
+  background-image: url("img/Torta\ Banoffee.png");
+}
+
+/* p52 — TORTA DE MORANGO */
+
+[data-photo="p52"] {
+  background-image: url("img/Torta\ Cheesecake\ de\ Frutas\ Vermelhas.png");
+}
+
+/* p53 — TORTA DE LIMÃO */
+
+[data-photo="p53"] {
+  background-image: url("img/Torta\ de\ Chocolate\ Belga.png");
+}
+
+/* p54 — CHEESECAKE DE FRUTAS VERMELHAS */
+
+[data-photo="p54"] {
+  background-image: url("img/Torta\ de\ Limão\ com\ Merengue.png");
+}
+
+/* p55 — TORTA HOLANDESA */
+
+[data-photo="p55"] {
+  background-image: url("img/Torta\ de\ Morango\ com\ Creme.png");
+}
+
+/* p56 — TORTA DE MARACUJÁ */
+
+[data-photo="p56"] {
+  background-image: url("img/Torta\ de\ Calabresa\ com\ Queijo.png");
+}
+
+/* p57 — TORTA BANOFFEE */
+
+[data-photo="p57"] {
+  background-image: url("img/Torta\ de\ Carne-Seca\ com\ Abóbora.png");
+}
+
+/* p58 — TORTA DE NOZES */
+
+[data-photo="p58"] {
+  background-image: url("img/Torta\ de\ Espinafre\ com\ Ricota.png");
+}
+
+/* p59 — TORTA DE MAÇÃ */
+
+[data-photo="p59"] {
+  background-image: url("img/Torta\ de\ Frango\ com\ Catupiry.png");
+}
+
+/* p60 — TORTA DE DOCE DE LEITE */
+
+[data-photo="p60"] {
+  background-image: url("img/Torta\ de\ Palmito.png");
+}
+
+/* ==================================================
+   FIM DO CSS
+
+   TODAS AS IMAGENS DO SITE ESTÃO NESTE ARQUIVO.
+================================================== */
+
+/* ==========================================
+   CORREÇÃO DO HEADER — DOCES & DELÍCIAS
+========================================== */
+
+.site-header {
+  width: 100%;
+  background: #fcf6ee;
+}
+
+.header-inner {
+  height: 85px;
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* LOGO PEQUENA */
+
+.brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.brand .logo-photo {
+  display: block;
+  width: 62px !important;
+  height: 62px !important;
+  min-width: 62px;
+  min-height: 62px;
+  flex: 0 0 62px;
+
+  background-image: url("img/Logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+/* NOME DA LOJA */
+
+.brand strong {
+  display: block;
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+.brand small {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+/* MENU */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.nav-links a {
+  white-space: nowrap;
+}
+
+/* CARRINHO */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* CELULAR */
+
+@media (max-width: 760px) {
+  .header-inner {
+    height: 74px;
+    min-height: 74px;
+    gap: 8px;
+  }
+
+  .brand .logo-photo {
+    width: 45px !important;
+    height: 45px !important;
+    min-width: 45px;
+    min-height: 45px;
+    flex-basis: 45px;
+  }
+
+  .brand strong {
+    font-size: 19px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+
+
+/* ==========================================
+   FOOTER — HORÁRIOS DE FUNCIONAMENTO
+========================================== */
+
+/* COLUNA DOS HORÁRIOS */
+
+.footer-hours {
+  min-width: 0;
+}
+
+/* LISTA DE HORÁRIOS */
+
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* CADA DIA E SEU HORÁRIO */
+
+.hours-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 244, 235, 0.12);
+}
+
+/* NOMES DOS DIAS */
+
+.hours-row span {
+  color: #e6cabb;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* HORÁRIOS */
+
+.hours-row strong {
+  flex-shrink: 0;
+  color: #fff4eb;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* MENSAGEM FINAL */
+
+.footer-hours .hours-message {
+  margin-top: 22px;
+  color: #dcaea2;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+  .footer-hours {
+    grid-column: 1 / -1;
+  }
+
+  .hours-list {
+    max-width: 380px;
+  }
+
+}
+

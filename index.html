@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Doces & Delícias — confeitaria artesanal, cafés, doces, salgados, pães e tortas feitos com carinho."
+  >
+
+  <meta name="theme-color" content="#fcf6ee">
+
+  <title>
+    Doces & Delícias | Confeitaria Artesanal
+  </title>
+
+  <!-- ÍCONE DA ABA DO NAVEGADOR -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="img/Logo.png"
+  >
+
+  <!-- ARQUIVO CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- ======================================
+       1. FAIXA SUPERIOR
+  ======================================= -->
+
+  <div class="announcement">
+
+    <span>
+      ♡ Um cantinho acolhedor para os seus melhores momentos
+    </span>
+
+    <span>✦</span>
+
+    <span>Feito com carinho</span>
+
+  </div>
+
+
+  <!-- ======================================
+       2. CABEÇALHO / HEADER
+  ======================================= -->
+
+  <header class="site-header" id="site-header">
+
+    <div class="header-inner container">
+
+      <!-- LOGO E NOME DA LOJA -->
+
+      <a
+        href="#/"
+        class="brand"
+        aria-label="Doces & Delícias — Página inicial"
+      >
+
+        <span
+          class="logo-photo"
+          role="img"
+          aria-label="Logo Doces & Delícias"
+        ></span>
+
+        <span class="brand-text">
+
+          <strong>Doces & Delícias</strong>
+
+          <small>
+            CONFEITARIA ARTESANAL
+          </small>
+
+        </span>
+
+      </a>
+
+
+      <!-- MENU DE NAVEGAÇÃO -->
+
+      <nav
+        class="nav-links"
+        aria-label="Menu principal"
+      >
+
+        <a href="#/" data-nav="home">
+          Início
+        </a>
+
+        <a href="#/produtos" data-nav="products">
+          Cardápio
+        </a>
+
+        <a href="#/sobre" data-nav="about">
+          Nossa história
+        </a>
+
+        <a href="#/contato" data-nav="contact">
+          Contato
+        </a>
+
+      </nav>
+
+
+      <!-- BOTÕES DO CABEÇALHO -->
+
+      <div class="header-actions">
+
+        <!-- PESQUISA -->
+
+        <button
+          type="button"
+          class="icon-btn"
+          id="search-open"
+          aria-label="Pesquisar produtos"
+          title="Pesquisar produtos"
+        >
+
+          <svg viewBox="0 0 24 24">
+            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+            <path d="m16 16 5 5"></path>
+          </svg>
+
+        </button>
+
+
+        <!-- CARRINHO -->
+
+        <button
+          type="button"
+          class="cart-button"
+          id="cart-open"
+          aria-label="Abrir carrinho"
+        >
+
+          <svg viewBox="0 0 24 24">
+
+            <path
+              d="M3 4h2l2.3 11.1a2 2 0 0 0 2 1.6H19a2 2 0 0 0 1.9-1.4L23 8H6"
+            ></path>
+
+            <circle cx="10" cy="21" r="1"></circle>
+            <circle cx="19" cy="21" r="1"></circle>
+
+          </svg>
+
+          <span>Carrinho</span>
+
+          <b id="cart-count">0</b>
+
+        </button>
+
+
+        <!-- MENU PARA CELULARES -->
+
+        <button
+          type="button"
+          class="icon-btn mobile-toggle"
+          id="menu-toggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+
+          <svg viewBox="0 0 24 24">
+
+            <path
+              d="M3 6h18M3 12h18M3 18h18"
+            ></path>
+
+          </svg>
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- NAVEGAÇÃO MOBILE -->
+
+    <nav
+      class="mobile-nav"
+      id="mobile-nav"
+      aria-label="Menu mobile"
+    >
+
+      <a href="#/">Início</a>
+
+      <a href="#/produtos">Cardápio</a>
+
+      <a href="#/sobre">Nossa história</a>
+
+      <a href="#/contato">Contato</a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- ======================================
+       3. CONTEÚDO PRINCIPAL
+
+       O app.js insere aqui:
+       HOME, PRODUTOS, SOBRE E CONTATO.
+  ======================================= -->
+
+  <main id="app" tabindex="-1"></main>
+
+
+  <!-- ======================================
+       4. RODAPÉ / FOOTER CORRIGIDO
+  ======================================= -->
+
+  <footer class="footer">
+
+    <div class="container footer-grid">
+
+
+      <!-- COLUNA 1: LOGO E APRESENTAÇÃO -->
+
+      <div class="footer-about">
+
+        <a
+          href="#/"
+          class="footer-brand"
+          aria-label="Doces & Delícias — Início"
+        >
+
+          <span
+            class="footer-logo"
+            role="img"
+            aria-label="Logo Doces & Delícias"
+          ></span>
+
+          <span class="footer-brand-name">
+            Doces & Delícias
+          </span>
+
+        </a>
+
+        <p class="footer-description">
+          Um pouquinho de carinho em cada receita,
+          para tornar os seus momentos ainda
+          mais especiais.
+        </p>
+
+      </div>
+
+
+      <!-- COLUNA 2: NAVEGAÇÃO -->
+
+      <div class="footer-column">
+
+        <h4>Explore</h4>
+
+        <a href="#/">Início</a>
+
+        <a href="#/produtos">
+          Nosso cardápio
+        </a>
+
+        <a href="#/sobre">
+          Nossa história
+        </a>
+
+        <a href="#/contato">
+          Fale conosco
+        </a>
+
+      </div>
+
+
+      <!-- COLUNA 3: CATEGORIAS -->
+
+      <div class="footer-column">
+
+        <h4>Sabores</h4>
+
+        <a href="#/produtos?categoria=cafes">
+          Cafés
+        </a>
+
+        <a href="#/produtos?categoria=salgados">
+          Salgados
+        </a>
+
+        <a href="#/produtos?categoria=doces">
+          Doces
+        </a>
+
+        <a href="#/produtos?categoria=artesanais">
+          Docinhos artesanais
+        </a>
+
+        <a href="#/produtos?categoria=paes">
+          Pães e folhados
+        </a>
+
+        <a href="#/produtos?categoria=bebidas">
+          Sucos e vitaminas
+        </a>
+
+        <a href="#/produtos?categoria=tortas">
+          Tortas
+        </a>
+
+      </div>
+
+
+      <!-- COLUNA 4: MENSAGEM -->
+
+      
+<!-- COLUNA 4 — HORÁRIOS DE FUNCIONAMENTO -->
+
+<div class="footer-column footer-hours">
+
+  <h4>Horário de funcionamento</h4>
+
+  <div class="hours-list">
+
+    <div class="hours-row">
+      <span>Segunda-feira</span>
+      <strong>Fechado</strong>
+    </div>
+
+    <div class="hours-row">
+      <span>Terça a sexta</span>
+      <strong>08h às 19h</strong>
+    </div>
+
+    <div class="hours-row">
+      <span>Sábado</span>
+      <strong>08h às 20h</strong>
+    </div>
+
+    <div class="hours-row">
+      <span>Domingo e feriados</span>
+      <strong>09h às 17h</strong>
+    </div>
+
+  </div>
+
+  <p class="hours-message">
+    Um café quentinho e muitas delícias esperam por você! ♡
+  </p>
+
+</div>
+
+
+    </div>
+
+
+    <!-- PARTE INFERIOR DO RODAPÉ -->
+
+    <div class="container footer-bottom">
+
+      <span>
+        © <span id="copyright-year"></span>
+        Doces & Delícias. Todos os direitos reservados.
+      </span>
+
+      <span>
+        Feito para adoçar o seu dia ♡
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ======================================
+       5. FUNDO ESCURECIDO DAS JANELAS
+  ======================================= -->
+
+  <div
+    class="overlay"
+    id="overlay"
+    hidden
+  ></div>
+
+
+  <!-- ======================================
+       6. CARRINHO LATERAL
+  ======================================= -->
+
+  <aside
+    class="drawer"
+    id="cart-drawer"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Seu carrinho"
+    aria-hidden="true"
+  >
+
+    <!-- CABEÇALHO DO CARRINHO -->
+
+    <div class="drawer-top">
+
+      <div>
+
+        <span class="eyebrow">
+          SEU PEDIDO
+        </span>
+
+        <h2>
+          Meu carrinho
+          <span id="cart-heading-count"></span>
+        </h2>
+
+      </div>
+
+      <button
+        type="button"
+        class="close-btn"
+        data-close
+        aria-label="Fechar carrinho"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <!-- PRODUTOS ADICIONADOS -->
+
+    <div
+      class="cart-scroll"
+      id="cart-items"
+    ></div>
+
+
+    <!-- RESUMO E FINALIZAÇÃO -->
+
+    <div class="cart-bottom">
+
+      <div class="cart-summary">
+
+        <span>Subtotal</span>
+
+        <strong id="cart-total">
+          R$ 0,00
+        </strong>
+
+      </div>
+
+
+      <button
+        type="button"
+        class="btn btn-primary full"
+        id="checkout-start"
+      >
+        Finalizar pedido →
+      </button>
+
+      <button
+        type="button"
+        class="text-button"
+        data-close
+      >
+        Continuar escolhendo
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- ======================================
+       7. JANELA DE DETALHES DOS PRODUTOS
+
+       O app.js coloca aqui:
+       - Fotografia
+       - Nome
+       - Descrição
+       - Ingredientes
+       - Preço
+       - Quantidade
+       - Botão adicionar
+  ======================================= -->
+
+  <div
+    id="modal"
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+    aria-hidden="true"
+  ></div>
+
+
+  <!-- ======================================
+       8. NOTIFICAÇÕES
+  ======================================= -->
+
+  <div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+
+  <!-- ======================================
+       9. ARQUIVOS JAVASCRIPT
+
+       MANTER NESTA ORDEM.
+  ======================================= -->
+
+  <script src="catalogo.js" defer></script>
+
+  <script src="app.js" defer></script>
+
+</body>
+</html>
