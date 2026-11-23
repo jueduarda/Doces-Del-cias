@@ -1013,15 +1013,15 @@ window.DOCES_CATALOGO = {
 {
   id: "p56",
   category: "tortas",
-  name: "Torta salgada de presunto e queijo",
-  description: "Torta assada com massa dourada e macia, recheada com presunto, queijo muçarela e creme suave. Uma opção saborosa para acompanhar cafés e bebidas. Servida em fatia individual.",
+  name: "Torta salgada de calabresa e queijo",
+  description: "Torta assada com massa dourada e macia, recheada com calabresa, queijo muçarela e creme suave. Uma opção saborosa para acompanhar cafés e bebidas. Servida em fatia individual.",
   ingredients: [
     "Farinha de trigo",
     "Leite",
     "Ovos",
     "Óleo vegetal",
     "Fermento químico",
-    "Presunto",
+    "Calabresa",
     "Queijo muçarela",
     "Requeijão cremoso",
     "Sal",
@@ -1033,15 +1033,15 @@ window.DOCES_CATALOGO = {
 {
   id: "p57",
   category: "tortas",
-  name: "Torta salgada de carne moída",
-  description: "Torta artesanal de massa levemente dourada, recheada com carne bovina moída e temperos selecionados. Uma combinação de textura macia e sabor caseiro. Servida em fatia individual.",
+  name: "Torta salgada de carne seca",
+  description: "Torta artesanal de massa levemente dourada, recheada com carne seca e temperos selecionados. Uma combinação de textura macia e sabor caseiro. Servida em fatia individual.",
   ingredients: [
     "Farinha de trigo",
     "Leite",
     "Ovos",
     "Óleo vegetal",
     "Fermento químico",
-    "Carne bovina moída",
+    "Carne seca",
     "Cebola",
     "Alho",
     "Tomate",
@@ -1119,3 +1119,4 @@ window.DOCES_CATALOGO = {
 
   ]
 };
+
